@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Cat
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5BD85DB3-FA79-42DF-B459-EBE7ED637628}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cart", "Cart", "{2C29471B-CAE8-48E8-8CEB-0ED07B937AEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cart.API", "Services\Cart\Cart.API\Cart.API.csproj", "{832E6C4E-3679-471D-8305-686F950A92E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{5BD85DB3-FA79-42DF-B459-EBE7ED637628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BD85DB3-FA79-42DF-B459-EBE7ED637628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BD85DB3-FA79-42DF-B459-EBE7ED637628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{832E6C4E-3679-471D-8305-686F950A92E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{832E6C4E-3679-471D-8305-686F950A92E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{832E6C4E-3679-471D-8305-686F950A92E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{832E6C4E-3679-471D-8305-686F950A92E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{86451903-F4F9-4ADC-902F-34093071C52D} = {EEB665DB-B283-4A26-8066-92D204429362}
 		{8F46C821-3379-4F31-85C1-635075ED2D8B} = {86451903-F4F9-4ADC-902F-34093071C52D}
+		{2C29471B-CAE8-48E8-8CEB-0ED07B937AEB} = {EEB665DB-B283-4A26-8066-92D204429362}
+		{832E6C4E-3679-471D-8305-686F950A92E4} = {2C29471B-CAE8-48E8-8CEB-0ED07B937AEB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {54A55AB5-47D5-4894-B67D-0DA22F2F6542}
