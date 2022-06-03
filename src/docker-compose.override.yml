@@ -7,7 +7,14 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db 
+      - mongo_data:/data/db
+
+  cartdb:
+    container_name: cartdb
+    restart: always
+    ports:
+      - "6379:6379"
+
   catalog.api:
     container_name: catalog.api
     environment:
@@ -17,3 +24,13 @@ services:
       - catalogdb
     ports:
       - "8000:80"
+
+  cart.api:
+    container_name: cart.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "CacheSettings:ConnectionString=cartdb:6379"
+    depends_on:
+      - cartdb
+    ports:
+      - "8001:80" 
