@@ -1,4 +1,6 @@
+using Cart.API.GrpcServices;
 using Cart.API.Repositories;
+using Discount.Grpc.Protos;
 using Microsoft.OpenApi.Models;
 
 namespace Cart.API
@@ -21,6 +23,9 @@ namespace Cart.API
             });
 
             services.AddScoped<ICartRepository, CartRepository>();
+            services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(
+                o => o.Address = new Uri(Configuration["GrpcSettings:DiscountUrl"]));
+            services.AddScoped<DiscountGrpcService>();
 
             services.AddControllers();
 
