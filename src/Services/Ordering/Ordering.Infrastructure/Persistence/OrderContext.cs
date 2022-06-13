@@ -24,8 +24,8 @@ namespace Ordering.Infrastructure.Persistence
                         entry.Entity.CreatedBy = "Pankaj";
                         break;
                     case EntityState.Modified:
-                        //entry.Entity.LastUpdatedDate = DateTime.Now;
-                        //entry.Entity.LastUpdatedBy = "Pankaj";
+                        entry.Entity.LastUpdatedDate = DateTime.Now;
+                        entry.Entity.LastUpdatedBy = "Pankaj";
                         break;
                 }
             }
