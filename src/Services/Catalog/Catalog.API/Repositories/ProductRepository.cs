@@ -1,6 +1,5 @@
 ﻿using Catalog.API.Data;
 using Catalog.API.Entities;
-using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;

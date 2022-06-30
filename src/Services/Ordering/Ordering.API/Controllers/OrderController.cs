@@ -21,10 +21,10 @@ namespace Ordering.API.Controllers
 
 
         [HttpGet("{userName}", Name = "GetOrder")]
-        [ProducesResponseType(typeof(IEnumerable<OrdersBusinessObject>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<OrdersBusinessObject>>> GetOrderByUserName(string userName)
+        [ProducesResponseType(typeof(IEnumerable<GetOrdersBusinessObject>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IEnumerable<GetOrdersBusinessObject>>> GetOrderByUserName(string userName)
         {
-            var query = new GetOrdersListQuery(userName);
+            var query = new GetOrderListQuery(userName);
             var orders = await _mediator.Send(query);
             return Ok(orders);
         }

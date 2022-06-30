@@ -33,8 +33,7 @@ namespace Ordering.Application.Features.Commands.CheckoutOrder
 
             await SendEmail(newOrder);
 
-                return newOrder.Id;
-
+            return newOrder.Id;
         }
 
         private async Task SendEmail(Order order)
